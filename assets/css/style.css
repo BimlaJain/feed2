@@ -389,6 +389,10 @@ border: 1px solid rgba(156, 161, 190, 1)
     text-align: left;
     color: #000000;
 }
+.bg-color2{
+    box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.1);
+    border: 0;
+}
 
 .Username {
     font-family: "Poppins", sans-serif;
@@ -800,18 +804,5 @@ border: 1px solid rgba(156, 161, 190, 1)
     }
     
 }
-.modal-lg {
-    max-width: 900px;
-}
 
-@media (min-width: 768px) {
-    .modal-lg {
-        width: 100%;
-    }
-}
 
-@media (min-width: 992px) {
-    .modal-lg {
-        width: 900px;
-    }
-}
