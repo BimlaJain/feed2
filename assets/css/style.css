@@ -52,7 +52,7 @@
     height: 100px;
     display: flex;
     align-items: center;
-    z-index: 5;
+    z-index: 11;
     position: sticky;
     box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.05);
     background-color: white;
@@ -86,7 +86,8 @@
 }
 
 .imageBox:hover>img {
-    scale: 1.2;
+    transform: scale(1.1);
+    
 }
 
 /* -----------margin and padding property */
@@ -225,8 +226,8 @@
 .border-r-35 {
     border-radius: 35px;
 }
-.min-width{
-    min-width: 1320px;
+.max-width{
+    max-width: 1320px;
 }
 .border-bottom{
     border-bottom: none;
@@ -407,9 +408,9 @@ border: 1px solid rgba(156, 161, 190, 1)
 
 /* -------------section_3------------- */
 .line3 {
-    border: 1px solid rgba(102, 102, 102, 1);
+    border: 1px solid rgb(159, 154, 154);
     width: 95%;
-    margin-top: 23px;
+
     margin-bottom: 26px;
 }
 
@@ -453,9 +454,6 @@ border: 1px solid rgba(156, 161, 190, 1)
     border-radius: 20px;
 }
 
-.float-left {
-    float: center;
-}
 
 .dropDownBox:hover .dropDownOption {
     display: block;
@@ -478,9 +476,7 @@ border: 1px solid rgba(156, 161, 190, 1)
 
 }
 
-.svg:hover {
-    rotate: 180deg;
-}
+
 
 .h-30 {
     height: 30px;
@@ -650,6 +646,24 @@ border: 1px solid rgba(156, 161, 190, 1)
 }
 
 @media (max-width:992px) {
+    label[for="menuIcon"]>span {
+            transition: all 200ms linear;
+        }
+    
+        input:checked~label[for="menuIcon"] span:nth-child(2) {
+            opacity: 0;
+            transform: translate(-40px);
+        }
+    
+        input:checked~label[for="menuIcon"] span:first-child {
+            transform: rotate(40deg);
+            transform-origin: left;
+        }
+    
+        input:checked~label[for="menuIcon"] span:last-child {
+            transform: rotate(-40deg);
+            transform-origin: left;
+        }
 
     label[for="menuIcon"] {
         width: 30px;
